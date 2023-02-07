@@ -17,7 +17,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh ''' 
-                       python3 scripts/pig_game.py
+                       python3 k8s/scripts/pig_game.py
                         '''
             }
         }
