@@ -17,10 +17,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh ''' 
-                       kubectl delete -f k8s/pigGame/pig_game_deploy.yaml
-                       kubectl delete -f k8s/pigGame/pig_game_service.yaml
-                       kubectl create -f k8s/pigGame/pig_game_deploy.yaml
-                       kubectl create -f k8s/pigGame/pig_game_service.yaml
+                       python3 scripts/pig_game.py
                         '''
             }
         }
